@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Semver Commit & README Update",
+  "description": "Automatically creates semantic version commits and updates the README file whenever changes are detected in the project",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Files have been modified. Please: 1) Analyze the changes made, 2) Create a commit using semantic versioning (semver) conventions with an appropriate commit message (feat:, fix:, chore:, docs:, etc.), 3) Update the README.md file to reflect any relevant changes, and 4) Commit the README update as well."
+  }
+}
