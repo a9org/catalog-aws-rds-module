@@ -1,6 +1,6 @@
 {
   "branches": ["master"],
-  "repositoryUrl": "https://github.com/${GITHUB_REPOSITORY}",
+  "repositoryUrl": "https://github.com/a9org/catalog-aws-rds-module",
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
