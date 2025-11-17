@@ -25,3 +25,4 @@ terraform.rc
 
 # Ignore lock file
 .terraform.lock.hcl
+.kiro/

@@ -1,28 +1,4 @@
 # ============================================================================
-# IDP-PROVIDED REQUIRED VARIABLES
-# ============================================================================
-
-variable "vpc_id" {
-  description = "VPC ID provided by A9 Catalog IDP"
-  type        = string
-}
-
-variable "environment" {
-  description = "Environment name (dev, staging, prod) provided by A9 Catalog IDP"
-  type        = string
-}
-
-variable "vpc_cidr_block" {
-  description = "VPC CIDR block provided by A9 Catalog IDP for security group configuration"
-  type        = string
-}
-
-variable "subnets_pvt" {
-  description = "List of private subnet IDs provided by A9 Catalog IDP"
-  type        = list(string)
-}
-
-# ============================================================================
 # DATABASE CONFIGURATION REQUIRED VARIABLES
 # ============================================================================
 
@@ -236,4 +212,32 @@ variable "performance_insights_retention_period" {
   description = "Performance Insights retention period in days"
   type        = number
   default     = 7
+}
+
+# ============================================================================
+# IDP-PROVIDED REQUIRED VARIABLES
+# ============================================================================
+
+variable "vpc_id" {
+  description = "VPC ID provided by A9 Catalog IDP"
+  type        = string
+  default     = null
+}
+
+variable "environment" {
+  description = "Environment name (dev, staging, prod) provided by A9 Catalog IDP"
+  type        = string
+  default     = null
+}
+
+variable "vpc_cidr_block" {
+  description = "VPC CIDR block provided by A9 Catalog IDP for security group configuration"
+  type        = string
+  default     = null
+}
+
+variable "subnets_pvt" {
+  description = "List of private subnet IDs provided by A9 Catalog IDP"
+  type        = list(string)
+  default     = null
 }
